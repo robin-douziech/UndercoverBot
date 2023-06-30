@@ -1,0 +1,54 @@
+{
+  "game_started": false,
+  "wait_mr.white": false,
+  "civils_word": "",
+  "undercovers_word": "",
+  "def_compos": {
+    "4": {
+      "civil": 2,
+      "undercover": 1,
+      "mr.white": 1
+    },
+    "5": {
+      "civil": 3,
+      "undercover": 1,
+      "mr.white": 1
+    },
+    "6": {
+      "civil": 4,
+      "undercover": 1,
+      "mr.white": 1
+    },
+    "7": {
+      "civil": 4,
+      "undercover": 2,
+      "mr.white": 1
+    },
+    "8": {
+      "civil": 5,
+      "undercover": 2,
+      "mr.white": 1
+    },
+    "9": {
+      "civil": 6,
+      "undercover": 2,
+      "mr.white": 1
+    },
+    "10": {
+      "civil": 6,
+      "undercover": 3,
+      "mr.white": 1
+    },
+    "11": {
+      "civil": 7,
+      "undercover": 3,
+      "mr.white": 1
+    },
+    "12": {
+      "civil": 8,
+      "undercover": 3,
+      "mr.white": 1
+    }
+  },
+  "compo": {}
+}
