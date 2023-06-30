@@ -107,14 +107,15 @@ async def game_ucb(ctx, action=None) :
 					bot.write_json(bot.vars, bot.vars_file)
 
 				# distribution des rôles
-				for i in range(bot.vars['compo']['undercover']) :
-					player = random.choice(players_list)
-					bot.players[player]['role'] = "undercover"
-					players_list.remove(player)
 				for i in range(bot.vars['compo']['mr.white']) :
 					player = random.choice(players_list)
 					bot.players[player]['role'] = "mr.white"
 					bot.players[player]['guess'] = ""
+					players_list.remove(player)
+				first_player = randomt.choice(players_list)
+				for i in range(bot.vars['compo']['undercover']) :
+					player = random.choice(players_list)
+					bot.players[player]['role'] = "undercover"
 					players_list.remove(player)
 				for player in players_list :
 					bot.players[player]['role'] = "civil"
@@ -132,6 +133,8 @@ async def game_ucb(ctx, action=None) :
 						await dm_channel.send(f"Ton mot est {bot.vars['civils_word']}")
 					else :
 						await dm_channel.send(f"Ton mot est {bot.vars['undercovers_word']}")
+
+				await bot.bot_txt_channel.send(f"{first_player} commence à dire son mot")
 				
 			else :
 
